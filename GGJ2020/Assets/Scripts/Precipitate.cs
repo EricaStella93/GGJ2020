@@ -55,6 +55,7 @@ public class Precipitate : MonoBehaviour
         if (PointManager.Instance.isDraw())
         {
            endText.text = "Draw";
+            return;
         }
         if(PointManager.Instance.redWinning() == red)
         {
