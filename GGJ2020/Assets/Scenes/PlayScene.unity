@@ -184,7 +184,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &10739104
 GameObject:
@@ -352,7 +352,7 @@ RectTransform:
   - {fileID: 945881396}
   - {fileID: 1002170957}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -783,7 +783,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_TargetDisplay: 0
 --- !u!224 &885218440
 RectTransform:
@@ -801,7 +801,7 @@ RectTransform:
   - {fileID: 586083820}
   - {fileID: 1060180131}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1144,7 +1144,7 @@ RectTransform:
   - {fileID: 2059676181}
   - {fileID: 609660087}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1356,7 +1356,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a11c1670507066146b4909ae5d5b26e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  totalTimeInSeconds: 10000000
+  totalTimeInSeconds: 5
   onFinishedTime: {fileID: 11400000, guid: 88889aebe6e8edf479d7dcc9edb5c686, type: 2}
 --- !u!114 &1075443445
 MonoBehaviour:
