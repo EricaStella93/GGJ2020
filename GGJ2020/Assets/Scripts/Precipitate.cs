@@ -19,6 +19,8 @@ public class Precipitate : MonoBehaviour
     public Sprite loseSprite;
     public Sprite drawSprite;
 
+    public GameObject canvasReplay;
+
     public bool red;
 
     // Start is called before the first frame update
@@ -37,6 +39,12 @@ public class Precipitate : MonoBehaviour
             if(transform.position.y <= targetY && speed > 0)
             {
                 speed = -1*damp*speed;
+                Debug.Log(speed);
+                if(Mathf.Abs(speed) < 5f)
+                {
+                    speed = 0;
+                    canvasReplay.SetActive(true);
+                }
             }
 
         }

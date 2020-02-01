@@ -16,6 +16,15 @@ public class WordCompleter : MonoBehaviour
     private int currentLetter = 0; //how many letters already typed
 
     public Text text;
+
+    public float pause = 0.2f;
+
+    private SizeTween textTween;
+
+    void Start()
+    {
+      textTween = text.gameObject.GetComponent<SizeTween>();  
+    }
     
     void OnGUI()
         {
@@ -36,11 +45,8 @@ public class WordCompleter : MonoBehaviour
                     }
                     if(currentLetter >= count)
                     {
-                        PointManager.Instance.score(red);
-                        FinishedWord();
-                        if(!WordsManager.Instance.isTimerOver())
-                            setObjectToRepair(WordsManager.Instance.extractNewObject(red));
-                            
+                       FinishedWord();
+                       Invoke("changeWord",pause);     
                     }
                     else
                     {
@@ -50,6 +56,13 @@ public class WordCompleter : MonoBehaviour
             }
         }
 
+    public void changeWord()
+    {
+        PointManager.Instance.score(red);
+        if(!WordsManager.Instance.isTimerOver())
+            setObjectToRepair(WordsManager.Instance.extractNewObject(red));
+    }
+
     public void setObjectToRepair(RepairableObject newObject)
     {
         objectToRepair = newObject;
@@ -57,11 +70,12 @@ public class WordCompleter : MonoBehaviour
         text.text = objectToRepair.name;
         currentLetter = 0;
         count = newObject.name.Length;
+        textTween.restart();
     }
 
     private void FinishedWord()
     {
-        //TODO cambiare immagine + animazione e suoni
+        objectSprite.sprite = objectToRepair.images[2];
     }
 
     private void UpdatedWord()
