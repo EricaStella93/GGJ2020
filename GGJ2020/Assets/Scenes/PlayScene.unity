@@ -1356,7 +1356,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a11c1670507066146b4909ae5d5b26e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  totalTimeInSeconds: 10
+  totalTimeInSeconds: 10000000
   onFinishedTime: {fileID: 11400000, guid: 88889aebe6e8edf479d7dcc9edb5c686, type: 2}
 --- !u!114 &1075443445
 MonoBehaviour:
@@ -1816,8 +1816,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: da18f42c0b5836b4d977346b021e7be1, type: 2}
   - {fileID: 11400000, guid: d381cf8160613b1469d7b770db945537, type: 2}
   - {fileID: 11400000, guid: 7ed47d3704c41e14f8c4ee991185d1be, type: 2}
-  redTeam: {fileID: 1620787851}
-  blueTeam: {fileID: 1002639002}
+  redTeam: {fileID: 1002639002}
+  blueTeam: {fileID: 1620787851}
 --- !u!4 &2076564980
 Transform:
   m_ObjectHideFlags: 0
