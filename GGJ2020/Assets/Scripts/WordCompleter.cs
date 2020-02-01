@@ -30,7 +30,7 @@ public class WordCompleter : MonoBehaviour
     void OnGUI()
         {
             Event e = Event.current;
-            if (e.isKey)
+            if (e.isKey && !WordsManager.Instance.isTimerOver())
             {
                 if(e.character == objectToRepair.name[currentLetter])
                 {

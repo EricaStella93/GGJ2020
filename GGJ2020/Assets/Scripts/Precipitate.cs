@@ -29,7 +29,6 @@ public class Precipitate : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-                            
         if(active)
         {
             transform.position += Vector3.down * speed * Time.deltaTime;
