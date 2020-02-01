@@ -20,29 +20,17 @@ public class PointManager : MonoBehaviour
             return instance; 
         }
     }
-     
-     private void Awake()
-     {
-         // if the singleton hasn't been initialized yet
-         if (instance != null && instance != this) 
-         {
-             Destroy(this.gameObject);
-         }
- 
-         instance = this;
-         DontDestroyOnLoad( this.gameObject );
-     }
 
-    // Start is called before the first frame update
-    void Start()
+    private void Awake()
     {
-        
-    }
+        // if the singleton hasn't been initialized yet
+        if (instance != null && instance != this)
+        {
+            Destroy(this.gameObject);
+        }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        instance = this;
+        DontDestroyOnLoad(this.gameObject);
     }
 
     public void score(bool red)

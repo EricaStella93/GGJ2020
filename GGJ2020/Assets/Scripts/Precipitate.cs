@@ -17,6 +17,7 @@ public class Precipitate : MonoBehaviour
 
     public Sprite winSprite;
     public Sprite loseSprite;
+    public Sprite drawSprite;
 
     public bool red;
 
@@ -44,6 +45,11 @@ public class Precipitate : MonoBehaviour
     public void Activate()
     {
         active = true;
+        if (PointManager.Instance.isDraw())
+        {
+            image.sprite = drawSprite;
+            return;
+        }
         if(PointManager.Instance.redWinning() == red)
         {
             image.sprite = winSprite;

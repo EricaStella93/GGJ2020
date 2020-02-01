@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class WordCompleter : MonoBehaviour
 {
-    public SpriteRenderer objectSprite;
+    public Image objectSprite;
     
     private RepairableObject objectToRepair;
 
@@ -52,8 +52,8 @@ public class WordCompleter : MonoBehaviour
 
     public void setObjectToRepair(RepairableObject newObject)
     {
-        objectSprite.sprite = objectToRepair.images[0];
         objectToRepair = newObject;
+        objectSprite.sprite = objectToRepair.images[0];
         text.text = objectToRepair.name;
         currentLetter = 0;
         count = newObject.name.Length;
