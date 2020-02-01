@@ -157,6 +157,9 @@ MonoBehaviour:
   startFadingTime: 0.75
   activeFade: 0
   fadingSpeed: 0.05
+  source: {fileID: 270130859}
+  clip: {fileID: 8300000, guid: d3f1b68677813b5479e477a6b22c794b, type: 3}
+  clipValue: 1
 --- !u!114 &126802819
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -222,6 +225,7 @@ GameObject:
   m_Component:
   - component: {fileID: 270130860}
   - component: {fileID: 270130859}
+  - component: {fileID: 270130861}
   m_Layer: 0
   m_Name: SoundEffects
   m_TagString: Untagged
@@ -339,6 +343,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &270130861
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 270130858}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0eb7713318a9f6468f6b2b9e359f3cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &329958410
 GameObject:
   m_ObjectHideFlags: 0
@@ -376,6 +392,9 @@ MonoBehaviour:
   startFadingTime: 0.9
   activeFade: 0
   fadingSpeed: 0.05
+  source: {fileID: 270130859}
+  clip: {fileID: 8300000, guid: 282efe087e8cf344488ed621aadb0701, type: 3}
+  clipValue: 0.3
 --- !u!114 &329958412
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -885,9 +904,12 @@ MonoBehaviour:
   first: 0
   last: 0
   next: {fileID: 329958411}
-  startFadingTime: 0.4
+  startFadingTime: 0.2
   activeFade: 0
   fadingSpeed: 0.05
+  source: {fileID: 270130859}
+  clip: {fileID: 8300000, guid: 47fcb022a8b8c504f8134e582e9c52f3, type: 3}
+  clipValue: 0.4
 --- !u!114 &854396840
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -980,6 +1002,9 @@ MonoBehaviour:
   startFadingTime: 0.9
   activeFade: 0
   fadingSpeed: 0.05
+  source: {fileID: 270130859}
+  clip: {fileID: 0}
+  clipValue: 0
 --- !u!114 &1123083953
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1072,6 +1097,9 @@ MonoBehaviour:
   startFadingTime: 0.4
   activeFade: 0
   fadingSpeed: 0.05
+  source: {fileID: 270130859}
+  clip: {fileID: 8300000, guid: 5f1aae38f8a7f7741ba633e76d4877b2, type: 3}
+  clipValue: 0.2
 --- !u!114 &1182918750
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1226,6 +1254,9 @@ MonoBehaviour:
   startFadingTime: 0.4
   activeFade: 0
   fadingSpeed: 0.05
+  source: {fileID: 270130859}
+  clip: {fileID: 8300000, guid: 67ca04d95c765cd45b25464b41f12829, type: 3}
+  clipValue: 1
 --- !u!114 &1643968215
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1299,6 +1330,9 @@ MonoBehaviour:
   startFadingTime: 0.4
   activeFade: 0
   fadingSpeed: 0.05
+  source: {fileID: 270130859}
+  clip: {fileID: 0}
+  clipValue: 1
 --- !u!114 &1977951123
 MonoBehaviour:
   m_ObjectHideFlags: 0
