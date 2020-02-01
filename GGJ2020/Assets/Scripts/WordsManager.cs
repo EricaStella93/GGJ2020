@@ -9,8 +9,8 @@ public class WordsManager : MonoBehaviour
     public WordCompleter redTeam;
     public WordCompleter blueTeam;
 
-    private int redCurrentWord;
-    private int blueCurrentWord;
+    private int redCurrentWord = -1;
+    private int blueCurrentWord = -1;
 
     private bool timerOver;
 
