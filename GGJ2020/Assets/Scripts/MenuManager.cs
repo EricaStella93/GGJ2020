@@ -20,6 +20,7 @@ public class MenuManager : MonoBehaviour
         mainMenu.SetActive(true);
         tutorial.SetActive(false);
         credits.SetActive(false);
+        SfxManager.Instance.PlayMenuButtonClip();
     }
 
     public void OpenTutorial()
@@ -27,6 +28,7 @@ public class MenuManager : MonoBehaviour
         mainMenu.SetActive(false);
         tutorial.SetActive(true);
         credits.SetActive(false);
+        SfxManager.Instance.PlayMenuButtonClip();
     }
 
     public void OpenCredits()
@@ -34,6 +36,7 @@ public class MenuManager : MonoBehaviour
         mainMenu.SetActive(false);
         tutorial.SetActive(false);
         credits.SetActive(true);
+        SfxManager.Instance.PlayMenuButtonClip();
     }
 
     public void ClosePanel()
@@ -43,11 +46,16 @@ public class MenuManager : MonoBehaviour
 
     public void Quit()
     {
+        //TODO testare se si sente
+        SfxManager.Instance.PlayGrunt();
         Application.Quit();
     }
 
     public void Play()
     {
+        SfxManager.Instance.PlayStartButtonClip();
         SceneManager.LoadScene(1);
     }
+    
+    
 }

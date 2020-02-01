@@ -47,6 +47,7 @@ public class WordCompleter : MonoBehaviour
                     {
                        FinishedWord();
                        Invoke("changeWord",pause);     
+
                     }
                     else
                     {
@@ -84,6 +85,11 @@ public class WordCompleter : MonoBehaviour
         if (percentage >= 0.5f)
         {
             objectSprite.sprite = objectToRepair.images[1];
+            SfxManager.Instance.PlayHalfWordClip();
+        }
+        else
+        {
+            SfxManager.Instance.PlayLetterAcceptedClip();
         }
     }
 }
