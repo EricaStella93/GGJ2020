@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1077928b54dae8e418b981541799a2d9, type: 3}
-  m_Name: Stool
+  m_Name: clock
   m_EditorClassIdentifier: 
   images:
-  - {fileID: 21300000, guid: 33e459973e75fb248be280119933588c, type: 3}
-  - {fileID: 21300000, guid: d873d13e0f9b15842b5113a18906e3b4, type: 3}
-  - {fileID: 21300000, guid: a3460ccc188245247a4a00111eeed8f1, type: 3}
-  name: stool
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  name: clock

@@ -26,6 +26,16 @@ public class SfxManager : Singleton<SfxManager>
     private AudioSource sourceTwo;
 
     private bool stopped = false;
+
+    public float PlayButtonClipLength
+    {
+        get { return playButtonClip.length; }
+    }
+    
+    public float GruntClipLength
+    {
+        get { return innkeeperGrunt.length; }
+    }
     
     // Start is called before the first frame update
     void Start()

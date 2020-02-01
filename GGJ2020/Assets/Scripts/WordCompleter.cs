@@ -88,7 +88,7 @@ public class WordCompleter : MonoBehaviour
     private void UpdatedWord()
     {
         float percentage = ((float) currentLetter)/((float) objectToRepair.name.Length);
-        if (percentage >= 0.5f)
+        if (percentage >= 0.5f && objectSprite.sprite != objectToRepair.images[1])
         {
             objectSprite.sprite = objectToRepair.images[1];
             SfxManager.Instance.PlayHalfWordClip();

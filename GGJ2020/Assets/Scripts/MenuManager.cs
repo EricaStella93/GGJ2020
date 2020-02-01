@@ -10,6 +10,8 @@ public class MenuManager : MonoBehaviour
     public GameObject tutorial;
     public GameObject credits;
 
+    private bool started = false;
+
     private void Start()
     {
         OpenMainMenu();
@@ -17,6 +19,10 @@ public class MenuManager : MonoBehaviour
 
     public void OpenMainMenu()
     {
+        if (started)
+        {
+            return;
+        }
         mainMenu.SetActive(true);
         tutorial.SetActive(false);
         credits.SetActive(false);
@@ -25,6 +31,10 @@ public class MenuManager : MonoBehaviour
 
     public void OpenTutorial()
     {
+        if (started)
+        {
+            return;
+        }
         mainMenu.SetActive(false);
         tutorial.SetActive(true);
         credits.SetActive(false);
@@ -33,6 +43,10 @@ public class MenuManager : MonoBehaviour
 
     public void OpenCredits()
     {
+        if (started)
+        {
+            return;
+        }
         mainMenu.SetActive(false);
         tutorial.SetActive(false);
         credits.SetActive(true);
@@ -41,21 +55,34 @@ public class MenuManager : MonoBehaviour
 
     public void ClosePanel()
     {
+        if (started)
+        {
+            return;
+        }
         OpenMainMenu();
     }
 
     public void Quit()
     {
-        //TODO testare se si sente
+        started = true;
         SfxManager.Instance.PlayGrunt();
-        Application.Quit();
+        Invoke("QuitApp", SfxManager.Instance.GruntClipLength);
     }
 
     public void Play()
     {
+        started = true;
         SfxManager.Instance.PlayStartButtonClip();
+        Invoke("PlayApp", SfxManager.Instance.PlayButtonClipLength);
+    }
+
+    private void PlayApp()
+    {
         SceneManager.LoadScene(1);
     }
-    
-    
+
+    private void QuitApp()
+    {
+        Application.Quit();
+    }
 }

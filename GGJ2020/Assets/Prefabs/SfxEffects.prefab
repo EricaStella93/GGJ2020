@@ -140,17 +140,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e382d40a0a57274183b648361547f8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  menuButtonClip: {fileID: 8300000, guid: 0a37a09c7a26cd8439fb4eb04e817db8, type: 3}
-  playButtonClip: {fileID: 8300000, guid: 0a37a09c7a26cd8439fb4eb04e817db8, type: 3}
+  menuButtonClip: {fileID: 8300000, guid: 49ad7cad9cdb83e49a77fb93ff95b0a2, type: 3}
+  playButtonClip: {fileID: 8300000, guid: af953c2510eadf94d8ae48132b3d5f8d, type: 3}
   letterAcceptedClips:
   - {fileID: 8300000, guid: 0a37a09c7a26cd8439fb4eb04e817db8, type: 3}
-  - {fileID: 8300000, guid: 0a37a09c7a26cd8439fb4eb04e817db8, type: 3}
-  - {fileID: 8300000, guid: 0a37a09c7a26cd8439fb4eb04e817db8, type: 3}
-  - {fileID: 8300000, guid: 0a37a09c7a26cd8439fb4eb04e817db8, type: 3}
-  newWordClip: {fileID: 8300000, guid: 0a37a09c7a26cd8439fb4eb04e817db8, type: 3}
-  halfWordClip: {fileID: 8300000, guid: 0a37a09c7a26cd8439fb4eb04e817db8, type: 3}
-  fullWordClip: {fileID: 8300000, guid: 0a37a09c7a26cd8439fb4eb04e817db8, type: 3}
-  innkeeperGrunt: {fileID: 8300000, guid: 0a37a09c7a26cd8439fb4eb04e817db8, type: 3}
+  newWordClip: {fileID: 8300000, guid: d3f1b68677813b5479e477a6b22c794b, type: 3}
+  halfWordClip: {fileID: 8300000, guid: 8cf6ce4dae0948f499556ef9dca227fc, type: 3}
+  fullWordClip: {fileID: 8300000, guid: 2a6f2fda2a5633c4286ccfe5830e6264, type: 3}
+  innkeeperGrunt: {fileID: 8300000, guid: 282efe087e8cf344488ed621aadb0701, type: 3}
   gameFinishedClip: {fileID: 8300000, guid: 0a37a09c7a26cd8439fb4eb04e817db8, type: 3}
   minWaitForGrunt: 4
   maxWaitForGrunt: 10
