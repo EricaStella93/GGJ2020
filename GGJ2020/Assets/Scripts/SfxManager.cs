@@ -33,7 +33,6 @@ public class SfxManager : Singleton<SfxManager>
         DontDestroyOnLoad(this);
         AudioSource[] sources = GetComponents<AudioSource>();
         sourceOne = sources[0];
-        sourceTwo = sources[1];
         SceneManager.sceneLoaded += OnSceneLoaded;
     }
     
@@ -48,52 +47,44 @@ public class SfxManager : Singleton<SfxManager>
 
     public void PlayMenuButtonClip()
     {
-        sourceOne.clip = menuButtonClip;
-        sourceOne.Play();
+        sourceOne.PlayOneShot(menuButtonClip);
     }
     
     public void PlayStartButtonClip()
     {
-        sourceOne.clip = playButtonClip;
-        sourceOne.Play();
+        sourceOne.PlayOneShot(playButtonClip);
     }
     
     public void PlayLetterAcceptedClip()
     {
         int clipToPlay = Random.Range(0, letterAcceptedClips.Length);
-        sourceOne.clip = letterAcceptedClips[clipToPlay];
-        sourceOne.Play();
+        sourceOne.PlayOneShot(letterAcceptedClips[clipToPlay]);
     }
 
     public void PlayNewWordClip()
     {
-        sourceOne.clip = newWordClip;
-        sourceOne.Play();
+        sourceOne.PlayOneShot(newWordClip);
     }
     
     public void PlayHalfWordClip()
     {
-        sourceOne.clip = halfWordClip;
-        sourceOne.Play();
+        sourceOne.PlayOneShot(halfWordClip);
     }
     
     public void PlayFullWordClip()
     {
-        sourceOne.clip = fullWordClip;
-        sourceOne.Play();
+        sourceOne.PlayOneShot(fullWordClip);
     }
     
     public void PlayGameFinishedClip()
     {
-        sourceOne.clip = gameFinishedClip;
-        sourceOne.Play();
+        sourceOne.PlayOneShot(gameFinishedClip);
         StopGrunts();
     }
 
     public void PlayGrunt()
     {
-        sourceOne.clip = innkeeperGrunt;
-        sourceOne.Play();
+        sourceOne.PlayOneShot(innkeeperGrunt);
     }
 
     IEnumerator PlayInnkeeperGrunt()
@@ -103,8 +94,7 @@ public class SfxManager : Singleton<SfxManager>
             yield return new WaitForSeconds(10f);
             if (!stopped)
             {
-                sourceTwo.clip = innkeeperGrunt;
-                sourceTwo.Play();
+                sourceOne.PlayOneShot(innkeeperGrunt);
             }
         }
     }
