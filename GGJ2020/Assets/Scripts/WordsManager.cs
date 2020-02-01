@@ -16,6 +16,7 @@ public class WordsManager : MonoBehaviour
 
     private static WordsManager instance = null;
 
+
     public static WordsManager Instance
     {
         get
