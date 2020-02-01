@@ -1,10 +1,13 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class WordCompleter : MonoBehaviour
 {
+    public SpriteRenderer objectSprite;
+    
     private RepairableObject objectToRepair;
 
     private int count; //number of letters in the object
@@ -13,20 +16,7 @@ public class WordCompleter : MonoBehaviour
     private int currentLetter = 0; //how many letters already typed
 
     public Text text;
-
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-       
-    }
-
+    
     void OnGUI()
         {
             Event e = Event.current;
@@ -47,9 +37,14 @@ public class WordCompleter : MonoBehaviour
                     if(currentLetter >= count)
                     {
                         PointManager.Instance.score(red);
+                        FinishedWord();
                         if(!WordsManager.Instance.isTimerOver())
                             setObjectToRepair(WordsManager.Instance.extractNewObject(red));
                             
+                    }
+                    else
+                    {
+                        UpdatedWord();
                     }
                 }
             }
@@ -57,9 +52,24 @@ public class WordCompleter : MonoBehaviour
 
     public void setObjectToRepair(RepairableObject newObject)
     {
+        objectSprite.sprite = objectToRepair.images[0];
         objectToRepair = newObject;
         text.text = objectToRepair.name;
         currentLetter = 0;
         count = newObject.name.Length;
+    }
+
+    private void FinishedWord()
+    {
+        //TODO cambiare immagine + animazione e suoni
+    }
+
+    private void UpdatedWord()
+    {
+        float percentage = ((float) currentLetter)/((float) objectToRepair.name.Length);
+        if (percentage >= 0.5f)
+        {
+            objectSprite.sprite = objectToRepair.images[1];
+        }
     }
 }
