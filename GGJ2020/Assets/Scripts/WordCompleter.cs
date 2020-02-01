@@ -46,7 +46,7 @@ public class WordCompleter : MonoBehaviour
                     }
                     if(currentLetter >= count)
                     {
-                        //POINT HERE
+                        PointManager.Instance.score(red);
                         if(!WordsManager.Instance.isTimerOver())
                             setObjectToRepair(WordsManager.Instance.extractNewObject(red));
                             
