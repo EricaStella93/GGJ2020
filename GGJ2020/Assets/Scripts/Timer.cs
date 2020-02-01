@@ -27,6 +27,7 @@ public class Timer : MonoBehaviour
             UpdateTimerText(passedTime);
         }
         onFinishedTime.Raise(null);
+        SfxManager.Instance.PlayGameFinishedClip();
     }
 
     private void UpdateTimerText(int passedTime)

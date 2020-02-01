@@ -38,9 +38,11 @@ public class WordCompleter : MonoBehaviour
                     {
                         PointManager.Instance.score(red);
                         FinishedWord();
-                        if(!WordsManager.Instance.isTimerOver())
+                        if (!WordsManager.Instance.isTimerOver())
+                        {
                             setObjectToRepair(WordsManager.Instance.extractNewObject(red));
-                            
+                            SfxManager.Instance.PlayNewWordClip();
+                        }
                     }
                     else
                     {
@@ -70,6 +72,11 @@ public class WordCompleter : MonoBehaviour
         if (percentage >= 0.5f)
         {
             objectSprite.sprite = objectToRepair.images[1];
+            SfxManager.Instance.PlayHalfWordClip();
+        }
+        else
+        {
+            SfxManager.Instance.PlayLetterAcceptedClip();
         }
     }
 }
