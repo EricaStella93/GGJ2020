@@ -18,6 +18,13 @@ public class ImageFading : MonoBehaviour
     public float fadingSpeed;
 
     private float startFadeValue = 1;
+
+    public AudioSource source;
+    public AudioClip clip;
+
+    private bool playedClip = false;
+
+    public float clipValue;
     // Start is called before the first frame update
     void Start()
     {
@@ -39,6 +46,11 @@ public class ImageFading : MonoBehaviour
                 next.GetImage().color = new Color(image.color.r, image.color.g, image.color.b, 1-startFadeValue);
             }
             startFadeValue = Mathf.Lerp(startFadeValue, 0, fadingSpeed);
+            if(startFadeValue < clipValue && clip && !playedClip)
+            {
+                source.PlayOneShot(clip);
+                playedClip = true;
+            }
             if(startFadeValue < 0.01f)
             {
                 if(!last)
@@ -61,7 +73,7 @@ public class ImageFading : MonoBehaviour
 
     public void startFading()
     {
-        Invoke("fadingActivate", startFadingTime);
+        Invoke("fadingActivate", startFadingTime);   
         
     }
 
