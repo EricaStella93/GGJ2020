@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1077928b54dae8e418b981541799a2d9, type: 3}
-  m_Name: Barrel
+  m_Name: mug
   m_EditorClassIdentifier: 
   images:
-  - {fileID: 21300000, guid: b3e661a2d83baf2479fde039470a5dc2, type: 3}
-  - {fileID: 21300000, guid: 6aa893e4a708f5d45907431d9234d923, type: 3}
-  - {fileID: 21300000, guid: 088073988a017974c823c0fd3b22dabf, type: 3}
-  name: barrell
+  - {fileID: 21300000, guid: 8bb81d76d32949d49a0ea891fa5c0873, type: 3}
+  - {fileID: 21300000, guid: 894e8c144fa439d448f1b618319d6d69, type: 3}
+  - {fileID: 21300000, guid: dd5af964251278f40b56043af185fc22, type: 3}
+  name: jug

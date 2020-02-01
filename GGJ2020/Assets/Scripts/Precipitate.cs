@@ -22,10 +22,14 @@ public class Precipitate : MonoBehaviour
 
     public bool red;
 
+    RectTransform rectTransform;
+    
+
     // Start is called before the first frame update
     void Start()
     {
         image = GetComponent<Image>();
+        rectTransform = GetComponent<RectTransform>();
     }
 
     // Update is called once per frame
@@ -33,9 +37,9 @@ public class Precipitate : MonoBehaviour
     {
         if(active)
         {
-            transform.position += Vector3.down * speed * Time.deltaTime;
+            rectTransform.localPosition += Vector3.down * speed * Time.deltaTime;
             speed += acc;
-            if(transform.position.y <= targetY && speed > 0)
+            if(rectTransform.localPosition.y <= targetY && speed > 0)
             {
                 speed = -1*damp*speed;
                 if(Mathf.Abs(speed) < 5f)

@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -1715,7 +1715,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 481.8}
+  m_AnchoredPosition: {x: 0, y: 637.00006}
   m_SizeDelta: {x: 397.7, y: -240.4}
   m_Pivot: {x: 1, y: 0.5}
 --- !u!114 &945881397
@@ -1760,7 +1760,7 @@ MonoBehaviour:
   speed: 3
   acc: 20
   damp: 0.4
-  targetY: 280
+  targetY: 90
   endText: {fileID: 1171916161}
   canvasReplay: {fileID: 2081393659716096262}
   red: 0
@@ -2737,8 +2737,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.75, y: 0.5}
   m_AnchorMax: {x: 0.75, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchoredPosition: {x: -0.000015258789, y: 39.411}
+  m_SizeDelta: {x: 162.79, y: 162.79}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1203180220
 CanvasRenderer:
@@ -2882,8 +2882,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.25, y: 0.5}
   m_AnchorMax: {x: 0.25, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchoredPosition: {x: -0.000015258789, y: 40.956}
+  m_SizeDelta: {x: 159.88, y: 159.88}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1425805730
 CanvasRenderer:
@@ -3527,7 +3527,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 0, y: 481.8}
+  m_AnchoredPosition: {x: 0, y: 637}
   m_SizeDelta: {x: 402.3, y: -240.4}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &2059676182
@@ -3572,7 +3572,7 @@ MonoBehaviour:
   speed: 3
   acc: 20
   damp: 0.4
-  targetY: 280
+  targetY: 90
   endText: {fileID: 1096919915}
   canvasReplay: {fileID: 2081393659716096262}
   red: 1
@@ -3643,17 +3643,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectPool:
-  - {fileID: 11400000, guid: 1af8f3fc3aa09df49b0240eab3794568, type: 2}
-  - {fileID: 11400000, guid: 6b4f34e0d3cffe1488fd0981309e9758, type: 2}
-  - {fileID: 11400000, guid: 23c59f05c5b3a2a4d949778883d0fc9b, type: 2}
-  - {fileID: 11400000, guid: f71cfc1f3cae9d049bf4b80c30d1ea80, type: 2}
-  - {fileID: 11400000, guid: 79fe62b676f12f947bd630a62d3185b5, type: 2}
-  - {fileID: 11400000, guid: 4baeebe920484eb408d75879ec8ccf23, type: 2}
-  - {fileID: 11400000, guid: da18f42c0b5836b4d977346b021e7be1, type: 2}
-  - {fileID: 11400000, guid: fdc35ffb49fd889499c358455a071550, type: 2}
-  - {fileID: 11400000, guid: d3ff21e3b32dbf444bae514a43dfcedf, type: 2}
+  - {fileID: 11400000, guid: 9cc57a4d89927fb448555f79fbdf342a, type: 2}
+  - {fileID: 11400000, guid: f9b73e47194df134bb424b2d267bc2fa, type: 2}
+  - {fileID: 11400000, guid: 3a3a2f5a939605e44b23b35ea4756820, type: 2}
   - {fileID: 11400000, guid: d381cf8160613b1469d7b770db945537, type: 2}
-  - {fileID: 11400000, guid: 7ed47d3704c41e14f8c4ee991185d1be, type: 2}
+  - {fileID: 11400000, guid: de616710ccc5dcf4abcc3befa103a13a, type: 2}
   redTeam: {fileID: 1002639002}
   blueTeam: {fileID: 1620787851}
 --- !u!4 &2076564980
