@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class Precipitate : MonoBehaviour
 {
@@ -15,9 +16,7 @@ public class Precipitate : MonoBehaviour
 
     private Image image;
 
-    public Sprite winSprite;
-    public Sprite loseSprite;
-    public Sprite drawSprite;
+    public TextMeshProUGUI endText;
 
     public GameObject canvasReplay;
 
@@ -51,19 +50,19 @@ public class Precipitate : MonoBehaviour
 
     public void Activate()
     {
+        Debug.Log("Activate");
         active = true;
         if (PointManager.Instance.isDraw())
         {
-            image.sprite = drawSprite;
-            return;
+           endText.text = "Draw";
         }
         if(PointManager.Instance.redWinning() == red)
         {
-            image.sprite = winSprite;
+            endText.text = "Ya winn!";
         }
         else
         {
-            image.sprite = loseSprite;
+            endText.text = "Ya lose!";
         }
     }
 }

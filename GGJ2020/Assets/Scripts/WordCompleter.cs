@@ -37,15 +37,16 @@ public class WordCompleter : MonoBehaviour
                 if(Char.ToLower(e.character) == Char.ToLower(objectToRepair.name[currentLetter]))
                 {
                     currentLetter++;
-                    text.text = "<color=green>";
+                    text.text = "<color=#ff9300>";
                     for(int i = 0; i < count; i++)
                     {
                         text.text += objectToRepair.name[i];
                         if(i == currentLetter-1)
                         {
-                            text.text += "</color>";
+                            text.text += "</color><color=#18247C>";
                         }
                     }
+                    text.text += "</color>";
                     if(currentLetter >= count)
                     {
                        blockInput = true;
@@ -72,7 +73,7 @@ public class WordCompleter : MonoBehaviour
     {
         objectToRepair = newObject;
         objectSprite.sprite = objectToRepair.images[0];
-        text.text = objectToRepair.name;
+        text.text = "<color=#18247C>"+objectToRepair.name+"</color>";
         currentLetter = 0;
         count = newObject.name.Length;
         blockInput = false;

@@ -41,6 +41,11 @@ public class ImageFading : MonoBehaviour
             startFadeValue = Mathf.Lerp(startFadeValue, 0, fadingSpeed);
             if(startFadeValue < 0.01f)
             {
+                if(!last)
+                {
+                    image.color = new Color(image.color.r, image.color.g, image.color.b, 0);
+                    next.GetImage().color = new Color(image.color.r, image.color.g, image.color.b, 1);
+                }
                 activeFade = false;
                 if(!last)
                 {
