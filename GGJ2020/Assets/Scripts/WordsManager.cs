@@ -44,12 +44,6 @@ public class WordsManager : MonoBehaviour
         blueTeam.setObjectToRepair(extractNewObject(false));
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public RepairableObject extractNewObject(bool red)
     {
         int extract = Random.Range(0, objectPool.Length);

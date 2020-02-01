@@ -14,6 +14,10 @@ public class MusicManager : MonoBehaviour
 
     public void StopMusic()
     {
-        source.Stop();
+        if (!PointManager.Instance.isDraw())
+        {
+            source.Stop();
+        }
+        //TODO fermarla dopo la parola di spareggio
     }
 }
