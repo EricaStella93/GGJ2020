@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class WordCompleter : MonoBehaviour
 {
@@ -10,12 +11,14 @@ public class WordCompleter : MonoBehaviour
     
     private RepairableObject objectToRepair;
 
+    private bool blockInput = false;
+
     private int count; //number of letters in the object
 
     public bool red;
     private int currentLetter = 0; //how many letters already typed
 
-    public Text text;
+    public TextMeshProUGUI text;
 
     public float pause = 0.2f;
 
@@ -29,7 +32,7 @@ public class WordCompleter : MonoBehaviour
     void OnGUI()
         {
             Event e = Event.current;
-            if (e.isKey && !WordsManager.Instance.isTimerOver())
+            if (e.isKey && !WordsManager.Instance.isTimerOver() && !blockInput)
             {
                 if(Char.ToLower(e.character) == Char.ToLower(objectToRepair.name[currentLetter]))
                 {
@@ -45,6 +48,7 @@ public class WordCompleter : MonoBehaviour
                     }
                     if(currentLetter >= count)
                     {
+                       blockInput = true;
                        FinishedWord();
                        Invoke("changeWord",pause);     
 
@@ -71,6 +75,7 @@ public class WordCompleter : MonoBehaviour
         text.text = objectToRepair.name;
         currentLetter = 0;
         count = newObject.name.Length;
+        blockInput = false;
         textTween.restart();
     }
 
