@@ -31,7 +31,7 @@ public class WordCompleter : MonoBehaviour
             Event e = Event.current;
             if (e.isKey && !WordsManager.Instance.isTimerOver())
             {
-                if(e.character == objectToRepair.name[currentLetter])
+                if(Char.ToLower(e.character) == Char.ToLower(objectToRepair.name[currentLetter]))
                 {
                     currentLetter++;
                     text.text = "<color=green>";
