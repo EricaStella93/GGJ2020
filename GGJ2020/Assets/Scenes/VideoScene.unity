@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -158,9 +158,12 @@ MonoBehaviour:
   activeFade: 0
   fadingSpeed: 0.15
   source: {fileID: 270130859}
-  clip: {fileID: 8300000, guid: d3f1b68677813b5479e477a6b22c794b, type: 3}
-  clipValue: 1
+  clip: {fileID: 0}
+  clip2: {fileID: 0}
+  clipValue: 0
+  clipValue2: 0
   countdownObj: {fileID: 1608444874}
+  countClipDelayAsBeginning: 1
 --- !u!114 &126802819
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -381,9 +384,12 @@ MonoBehaviour:
   activeFade: 0
   fadingSpeed: 0.05
   source: {fileID: 270130859}
-  clip: {fileID: 8300000, guid: 282efe087e8cf344488ed621aadb0701, type: 3}
+  clip: {fileID: 8300000, guid: cfa2dba6049c12141b8b0095f272b260, type: 3}
+  clip2: {fileID: 8300000, guid: d3f1b68677813b5479e477a6b22c794b, type: 3}
   clipValue: 0.7
+  clipValue2: 0.1
   countdownObj: {fileID: 0}
+  countClipDelayAsBeginning: 0
 --- !u!114 &329958412
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -899,8 +905,11 @@ MonoBehaviour:
   fadingSpeed: 0.05
   source: {fileID: 270130859}
   clip: {fileID: 8300000, guid: 47fcb022a8b8c504f8134e582e9c52f3, type: 3}
+  clip2: {fileID: 0}
   clipValue: 0.4
+  clipValue2: 0
   countdownObj: {fileID: 0}
+  countClipDelayAsBeginning: 0
 --- !u!114 &854396840
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1151,8 +1160,11 @@ MonoBehaviour:
   fadingSpeed: 0.05
   source: {fileID: 270130859}
   clip: {fileID: 0}
+  clip2: {fileID: 0}
   clipValue: 0
+  clipValue2: 0
   countdownObj: {fileID: 0}
+  countClipDelayAsBeginning: 0
 --- !u!114 &1123083953
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1247,8 +1259,11 @@ MonoBehaviour:
   fadingSpeed: 0.05
   source: {fileID: 270130859}
   clip: {fileID: 8300000, guid: 5f1aae38f8a7f7741ba633e76d4877b2, type: 3}
+  clip2: {fileID: 0}
   clipValue: 0.2
+  clipValue2: 0
   countdownObj: {fileID: 0}
+  countClipDelayAsBeginning: 0
 --- !u!114 &1182918750
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1513,8 +1528,11 @@ MonoBehaviour:
   fadingSpeed: 0.05
   source: {fileID: 270130859}
   clip: {fileID: 8300000, guid: 67ca04d95c765cd45b25464b41f12829, type: 3}
+  clip2: {fileID: 0}
   clipValue: 1
+  clipValue2: 0
   countdownObj: {fileID: 0}
+  countClipDelayAsBeginning: 0
 --- !u!114 &1643968215
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1590,8 +1608,11 @@ MonoBehaviour:
   fadingSpeed: 0.05
   source: {fileID: 270130859}
   clip: {fileID: 0}
+  clip2: {fileID: 0}
   clipValue: 1
+  clipValue2: 0
   countdownObj: {fileID: 0}
+  countClipDelayAsBeginning: 0
 --- !u!114 &1977951123
 MonoBehaviour:
   m_ObjectHideFlags: 0

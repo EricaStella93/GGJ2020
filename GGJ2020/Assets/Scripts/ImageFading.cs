@@ -22,11 +22,18 @@ public class ImageFading : MonoBehaviour
     public AudioSource source;
     public AudioClip clip;
 
+    public AudioClip clip2;
+
     private bool playedClip = false;
 
+    private bool playedClip2 = false;
     public float clipValue;
 
+    public float clipValue2;
+
     public GameObject countdownObj;
+
+    public bool countClipDelayAsBeginning = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -43,23 +50,23 @@ public class ImageFading : MonoBehaviour
 
         if(activeFade)
         {
-            //TODO aiuto non so più dove spostarlo per farlo funzionare maledetto suono dello scaricoboh
-            if (last && !playedClip)
-            {
-                source.PlayOneShot(clip);
-                playedClip = true;
-                Debug.Log("played clip");
-            }
+
             if(!last)
             {
                 image.color = new Color(image.color.r, image.color.g, image.color.b, startFadeValue);
                 next.GetImage().color = new Color(image.color.r, image.color.g, image.color.b, 1-startFadeValue);
             }
             startFadeValue = Mathf.Lerp(startFadeValue, 0, fadingSpeed);
-            if(startFadeValue < clipValue && clip && !playedClip && !last)
+            if(startFadeValue < clipValue && clip && !playedClip)
             {
                 source.PlayOneShot(clip);
                 playedClip = true;
+            }
+
+            if(startFadeValue < clipValue2 && clip2 && !playedClip2)
+            {
+                source.PlayOneShot(clip2);
+                playedClip2 = true;
             }
 
             if (startFadeValue < 0.5 && last)
@@ -90,6 +97,7 @@ public class ImageFading : MonoBehaviour
     public void startFading()
     {
         Invoke("fadingActivate", startFadingTime);   
+
         
     }
 
@@ -101,4 +109,5 @@ public class ImageFading : MonoBehaviour
     {
         activeFade = true;
     }
+
 }
