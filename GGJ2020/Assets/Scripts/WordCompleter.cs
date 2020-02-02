@@ -29,6 +29,8 @@ public class WordCompleter : MonoBehaviour
 
     public TriggerEvent OnFinishedGame;
 
+    public TriggerEvent onSpareggioFinished;
+
     void Start()
     {
       textTween = text.gameObject.GetComponent<SizeTween>();  
@@ -58,7 +60,7 @@ public class WordCompleter : MonoBehaviour
                        FinishedWord();
                        if (isSpareggioTime)
                        {
-                           spareggioFinished = true;
+                           onSpareggioFinished.Raise(null);
                            if (red)
                            {
                                PointManager.Instance.redPoints++;
@@ -122,5 +124,10 @@ public class WordCompleter : MonoBehaviour
         {
             SfxManager.Instance.PlayLetterAcceptedClip();
         }
+    }
+
+    public void SpareggioFinished()
+    {
+        spareggioFinished = true;
     }
 }

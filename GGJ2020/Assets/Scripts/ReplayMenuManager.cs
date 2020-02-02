@@ -5,6 +5,15 @@ using UnityEngine.SceneManagement;
 
 public class ReplayMenuManager : MonoBehaviour
 {
+    public GameObject buttons;
+    public GameObject countdown;
+
+    public void QuickReplayButton()
+    {
+        buttons.SetActive(false);
+        countdown.SetActive(true);
+    }
+    
     public void QuickReplay()
     {
         SceneManager.LoadScene(2);
