@@ -13,6 +13,9 @@ public class PointManager : MonoBehaviour
     public TextMeshProUGUI redScoreText;
     public TextMeshProUGUI blueScoreText;
 
+    private SizeTween redPointTween;
+    private SizeTween bluePointTween;
+
     public static PointManager Instance
     {
         get
@@ -20,7 +23,12 @@ public class PointManager : MonoBehaviour
             return instance; 
         }
     }
-
+    void Start()
+    {
+        redPointTween = redScoreText.gameObject.GetComponent<SizeTween>();
+        
+        bluePointTween = blueScoreText.gameObject.GetComponent<SizeTween>();
+    }
     private void Awake()
     {
         // if the singleton hasn't been initialized yet
@@ -39,11 +47,13 @@ public class PointManager : MonoBehaviour
         {
             redPoints++;
             redScoreText.text = ""+redPoints;
+            redPointTween.restart();
         }
         else
         {
             bluePoints++;
             blueScoreText.text = ""+bluePoints;
+            bluePointTween.restart();
         }
     }
 

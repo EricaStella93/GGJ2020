@@ -1144,6 +1144,7 @@ GameObject:
   - component: {fileID: 586083820}
   - component: {fileID: 586083822}
   - component: {fileID: 586083821}
+  - component: {fileID: 586083823}
   m_Layer: 5
   m_Name: RedPoints
   m_TagString: Untagged
@@ -1289,6 +1290,61 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 586083819}
   m_CullTransparentMesh: 0
+--- !u!114 &586083823
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 586083819}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04781d1157420f2488936a96f45a8772, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  time: 0.4
+  curveX:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0.007141046
+      value: 1.0009898
+      inSlope: 0.006949816
+      outSlope: 0.006949816
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.28630653
+    - serializedVersion: 3
+      time: 3.4878123
+      value: 1.0023618
+      inSlope: -0.16301566
+      outSlope: -0.16301566
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 4.1131434
+      value: 0.967625
+      inSlope: 0.0051711975
+      outSlope: 0.0051711975
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 1
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 4.9304504
+      value: 0.9995575
+      inSlope: 0.039070353
+      outSlope: 0.039070353
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &624066731
 GameObject:
   m_ObjectHideFlags: 0
@@ -1619,7 +1675,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 760224007}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 058cba836c1846c3aa1c5fd2e28aea77, type: 3}
   m_Name: 
@@ -2031,6 +2087,7 @@ GameObject:
   - component: {fileID: 1060180131}
   - component: {fileID: 1060180133}
   - component: {fileID: 1060180132}
+  - component: {fileID: 1060180134}
   m_Layer: 5
   m_Name: BluePoints
   m_TagString: Untagged
@@ -2176,6 +2233,61 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1060180130}
   m_CullTransparentMesh: 0
+--- !u!114 &1060180134
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1060180130}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04781d1157420f2488936a96f45a8772, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  time: 0.4
+  curveX:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0.007141046
+      value: 1.0009898
+      inSlope: 0.006949816
+      outSlope: 0.006949816
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.28630653
+    - serializedVersion: 3
+      time: 3.4878123
+      value: 1.0023618
+      inSlope: -0.16301566
+      outSlope: -0.16301566
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 4.1131434
+      value: 0.967625
+      inSlope: 0.0051711975
+      outSlope: 0.0051711975
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 1
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 4.9304504
+      value: 0.9995575
+      inSlope: 0.039070353
+      outSlope: 0.039070353
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1075443442
 GameObject:
   m_ObjectHideFlags: 0
@@ -2569,7 +2681,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1111638070
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3166,6 +3278,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a16bea3948301584bb27a4d360e1959b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  objToDeactivateAtStart: []
+  text: {fileID: 0}
+  textTransform: {fileID: 0}
+  onFinishCountdown:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &1437715751
 MonoBehaviour:
   m_ObjectHideFlags: 0
