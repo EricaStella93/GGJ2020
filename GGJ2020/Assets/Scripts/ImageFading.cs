@@ -25,6 +25,8 @@ public class ImageFading : MonoBehaviour
     private bool playedClip = false;
 
     public float clipValue;
+
+    public GameObject countdownObj;
     // Start is called before the first frame update
     void Start()
     {
@@ -46,7 +48,7 @@ public class ImageFading : MonoBehaviour
                 next.GetImage().color = new Color(image.color.r, image.color.g, image.color.b, 1-startFadeValue);
             }
             startFadeValue = Mathf.Lerp(startFadeValue, 0, fadingSpeed);
-            if(startFadeValue < clipValue && clip && !playedClip)
+            if(startFadeValue < clipValue && clip && !playedClip && !last)
             {
                 source.PlayOneShot(clip);
                 playedClip = true;
@@ -65,7 +67,11 @@ public class ImageFading : MonoBehaviour
                 }
                 else
                 {
-                    SceneManager.LoadScene("PlayScene");
+                    //TODO far partire prima
+                    //TODO suoni countdown
+                    source.PlayOneShot(clip);
+                    playedClip = true;
+                    countdownObj.SetActive(true);
                 }
             }
         }

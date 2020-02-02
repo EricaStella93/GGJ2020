@@ -3,14 +3,29 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 
 public class Countdown : MonoBehaviour
 {
+    public GameObject[] objToDeactivateAtStart;
+    
     public TextMeshProUGUI text;
     public Transform textTransform;
 
+    public UnityEvent onFinishCountdown;
+    
+    
+
     private void Start()
     {
+        if (objToDeactivateAtStart != null)
+        {
+            for (int i = 0; i < objToDeactivateAtStart.Length; i++)
+            {
+                objToDeactivateAtStart[i].SetActive(false);
+            }
+        }
         StartCoroutine(CountdownStart());
     }
 
@@ -18,7 +33,7 @@ public class Countdown : MonoBehaviour
     {
         int remainingSeconds = 3;
         float time = 0;
-        while (remainingSeconds >= 0)
+        while (remainingSeconds > 0)
         {
             text.text = remainingSeconds.ToString();
             time = 0;
@@ -31,5 +46,12 @@ public class Countdown : MonoBehaviour
 
             remainingSeconds--;
         }
+        
+        onFinishCountdown.Invoke();
+    }
+
+    public void PlayGameScene()
+    {
+        SceneManager.LoadScene("PlayScene");
     }
 }
