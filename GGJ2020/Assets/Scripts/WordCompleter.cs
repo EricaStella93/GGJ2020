@@ -110,6 +110,7 @@ public class WordCompleter : MonoBehaviour
     private void FinishedWord()
     {
         objectSprite.sprite = objectToRepair.images[2];
+        SfxManager.Instance.PlayFullWordClip();
     }
 
     private void UpdatedWord()

@@ -44,7 +44,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.63
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -143,11 +143,12 @@ MonoBehaviour:
   menuButtonClip: {fileID: 8300000, guid: 49ad7cad9cdb83e49a77fb93ff95b0a2, type: 3}
   playButtonClip: {fileID: 8300000, guid: af953c2510eadf94d8ae48132b3d5f8d, type: 3}
   letterAcceptedClips:
-  - {fileID: 8300000, guid: 0a37a09c7a26cd8439fb4eb04e817db8, type: 3}
+  - {fileID: 8300000, guid: b74ffe3b049662446a567db3170a54cd, type: 3}
   newWordClip: {fileID: 8300000, guid: d3f1b68677813b5479e477a6b22c794b, type: 3}
   halfWordClip: {fileID: 8300000, guid: 8cf6ce4dae0948f499556ef9dca227fc, type: 3}
   fullWordClip: {fileID: 8300000, guid: 2a6f2fda2a5633c4286ccfe5830e6264, type: 3}
   innkeeperGrunt: {fileID: 8300000, guid: 282efe087e8cf344488ed621aadb0701, type: 3}
   gameFinishedClip: {fileID: 8300000, guid: 0a37a09c7a26cd8439fb4eb04e817db8, type: 3}
+  lowTimerClip: {fileID: 0}
   minWaitForGrunt: 4
   maxWaitForGrunt: 10

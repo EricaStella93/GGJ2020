@@ -18,12 +18,12 @@ public class SfxManager : Singleton<SfxManager>
     [SerializeField] private AudioClip fullWordClip;
     [SerializeField] private AudioClip innkeeperGrunt;
     [SerializeField] private AudioClip gameFinishedClip;
+    [SerializeField] private AudioClip lowTimerClip;
 
     public float minWaitForGrunt = 4f;
     public float maxWaitForGrunt = 10f;
     
-    private AudioSource sourceOne;
-    private AudioSource sourceTwo;
+    private AudioSource source;
 
     private bool stopped = false;
 
@@ -42,7 +42,7 @@ public class SfxManager : Singleton<SfxManager>
     {
         DontDestroyOnLoad(this);
         AudioSource[] sources = GetComponents<AudioSource>();
-        sourceOne = sources[0];
+        source = sources[0];
         SceneManager.sceneLoaded += OnSceneLoaded;
     }
     
@@ -57,44 +57,49 @@ public class SfxManager : Singleton<SfxManager>
 
     public void PlayMenuButtonClip()
     {
-        sourceOne.PlayOneShot(menuButtonClip);
+        source.PlayOneShot(menuButtonClip);
     }
     
     public void PlayStartButtonClip()
     {
-        sourceOne.PlayOneShot(playButtonClip);
+        source.PlayOneShot(playButtonClip);
     }
     
     public void PlayLetterAcceptedClip()
     {
         int clipToPlay = Random.Range(0, letterAcceptedClips.Length);
-        sourceOne.PlayOneShot(letterAcceptedClips[clipToPlay]);
+        source.PlayOneShot(letterAcceptedClips[clipToPlay]);
     }
 
     public void PlayNewWordClip()
     {
-        sourceOne.PlayOneShot(newWordClip);
+        source.PlayOneShot(newWordClip);
     }
     
     public void PlayHalfWordClip()
     {
-        sourceOne.PlayOneShot(halfWordClip);
+        source.PlayOneShot(halfWordClip);
     }
     
     public void PlayFullWordClip()
     {
-        sourceOne.PlayOneShot(fullWordClip);
+        source.PlayOneShot(fullWordClip);
     }
     
     public void PlayGameFinishedClip()
     {
-        sourceOne.PlayOneShot(gameFinishedClip);
+        source.PlayOneShot(gameFinishedClip);
         StopGrunts();
+    }
+
+    public void PlayLowTimerClip()
+    {
+        source.PlayOneShot(lowTimerClip);
     }
 
     public void PlayGrunt()
     {
-        sourceOne.PlayOneShot(innkeeperGrunt);
+        source.PlayOneShot(innkeeperGrunt);
     }
 
     IEnumerator PlayInnkeeperGrunt()
@@ -104,7 +109,7 @@ public class SfxManager : Singleton<SfxManager>
             yield return new WaitForSeconds(10f);
             if (!stopped)
             {
-                sourceOne.PlayOneShot(innkeeperGrunt);
+                source.PlayOneShot(innkeeperGrunt);
             }
         }
     }
