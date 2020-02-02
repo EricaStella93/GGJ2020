@@ -84,7 +84,7 @@ public class Precipitate : MonoBehaviour
         active = true;
         if (PointManager.Instance.isDraw())
         {
-           endText.text = "Draw";
+           endText.text = "Last Blood!!!";
            return;
         }
         if(PointManager.Instance.redWinning() == red)

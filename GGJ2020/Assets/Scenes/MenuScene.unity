@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -1221,7 +1221,11 @@ MonoBehaviour:
 
     Graphics and Illustrations: Marco Fabbri, Stefano Cenci
 
-    Programming: Stefano Palma, Erica Stella'
+    Programming: Stefano Palma, Erica Stella
+
+    Music: Valerio de Vittorio
+
+    Sounds: Mattia Giovanetti'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4765095c3d20f72499496e6952d0e76f, type: 2}
   m_sharedMaterial: {fileID: -8965175153422507171, guid: 4765095c3d20f72499496e6952d0e76f,
@@ -1291,12 +1295,12 @@ MonoBehaviour:
   m_margin: {x: 0, y: 40.28875, z: 0, w: 41.660114}
   m_textInfo:
     textComponent: {fileID: 610715764}
-    characterCount: 139
+    characterCount: 192
     spriteCount: 0
-    spaceCount: 16
-    wordCount: 17
+    spaceCount: 23
+    wordCount: 24
     linkCount: 0
-    lineCount: 6
+    lineCount: 8
     pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
@@ -1864,6 +1868,78 @@ MonoBehaviour:
   mainMenu: {fileID: 849645044}
   tutorial: {fileID: 1184846895}
   credits: {fileID: 1709539018}
+--- !u!1 &1149074381
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1149074382}
+  - component: {fileID: 1149074384}
+  - component: {fileID: 1149074383}
+  m_Layer: 5
+  m_Name: TMP SubMeshUI [Ikusuteito SDF Material + LiberationSans SDF Atlas]
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1149074382
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1149074381}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1570400635}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1149074383
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1149074381}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 058cba836c1846c3aa1c5fd2e28aea77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_fontAsset: {fileID: 11400000, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
+  m_spriteAsset: {fileID: 0}
+  m_material: {fileID: 0}
+  m_sharedMaterial: {fileID: 0}
+  m_isDefaultMaterial: 0
+  m_padding: 1.25
+  m_canvasRenderer: {fileID: 1149074384}
+  m_TextComponent: {fileID: 1570400636}
+  m_materialReferenceIndex: 1
+--- !u!222 &1149074384
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1149074381}
+  m_CullTransparentMesh: 0
 --- !u!1 &1184846895
 GameObject:
   m_ObjectHideFlags: 0
@@ -1929,7 +2005,8 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1.3748001, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1149074382}
   m_Father: {fileID: 1715216820}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2036,18 +2113,18 @@ MonoBehaviour:
     characterCount: 609
     spriteCount: 0
     spaceCount: 117
-    wordCount: 112
+    wordCount: 110
     linkCount: 0
     lineCount: 10
     pageCount: 1
-    materialCount: 1
+    materialCount: 2
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
   m_hasFontAssetChanged: 0
   m_subTextObjects:
   - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 1149074383}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
