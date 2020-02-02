@@ -61,7 +61,7 @@ public class WordsManager : MonoBehaviour
         }
         return objectPool[extract]; //maybe try to make impossible to get the same one two times in a row?
         //and maybe that it can't be the enemy team's word
-        
+
     }
 
     public void setTimerOver(bool newTimer)

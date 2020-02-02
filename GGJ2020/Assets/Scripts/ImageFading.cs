@@ -40,8 +40,16 @@ public class ImageFading : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         if(activeFade)
         {
+            //TODO aiuto non so più dove spostarlo per farlo funzionare maledetto suono dello scaricoboh
+            if (last && !playedClip)
+            {
+                source.PlayOneShot(clip);
+                playedClip = true;
+                Debug.Log("played clip");
+            }
             if(!last)
             {
                 image.color = new Color(image.color.r, image.color.g, image.color.b, startFadeValue);
@@ -52,6 +60,12 @@ public class ImageFading : MonoBehaviour
             {
                 source.PlayOneShot(clip);
                 playedClip = true;
+            }
+
+            if (startFadeValue < 0.5 && last)
+            {
+                countdownObj.SetActive(true);
+                return;
             }
             if(startFadeValue < 0.01f)
             {
@@ -67,11 +81,7 @@ public class ImageFading : MonoBehaviour
                 }
                 else
                 {
-                    //TODO far partire prima
-                    //TODO suoni countdown
-                    source.PlayOneShot(clip);
-                    playedClip = true;
-                    countdownObj.SetActive(true);
+                    //Moved before
                 }
             }
         }

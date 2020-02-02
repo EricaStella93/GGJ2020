@@ -2562,6 +2562,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5471137284153721793, guid: 219a308c889fd084a990ba977d4572da,
+        type: 3}
+      propertyPath: letterAcceptedClips.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: b74ffe3b049662446a567db3170a54cd, type: 3}
     - target: {fileID: 5471137284153721795, guid: 219a308c889fd084a990ba977d4572da,
         type: 3}
       propertyPath: m_LocalPosition.x

@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
+
 public class Precipitate : MonoBehaviour
 {
     private bool active = false;
@@ -23,6 +24,11 @@ public class Precipitate : MonoBehaviour
     public bool red;
 
     RectTransform rectTransform;
+
+    public TriggerEvent onSpareggio;
+
+    private Vector3 startingPosition;
+    private float initialSpeed;
     
 
     // Start is called before the first frame update
@@ -30,6 +36,8 @@ public class Precipitate : MonoBehaviour
     {
         image = GetComponent<Image>();
         rectTransform = GetComponent<RectTransform>();
+        startingPosition = rectTransform.localPosition;
+        initialSpeed = speed;
     }
 
     // Update is called once per frame
@@ -45,11 +53,29 @@ public class Precipitate : MonoBehaviour
                 if(Mathf.Abs(speed) < 5f)
                 {
                     speed = 0;
-                    canvasReplay.SetActive(true);
+                    if (PointManager.Instance.isDraw())
+                    {
+                        if (onSpareggio)
+                        {
+                            onSpareggio.Raise(null);
+                        }
+                    }
+                    else
+                    {
+                        canvasReplay.SetActive(true);
+                    }
+
                 }
             }
 
         }
+    }
+
+    public void Reset()
+    {
+        active = false;
+        rectTransform.localPosition = startingPosition;
+        speed = initialSpeed;
     }
 
     public void Activate()
@@ -59,8 +85,7 @@ public class Precipitate : MonoBehaviour
         if (PointManager.Instance.isDraw())
         {
            endText.text = "Draw";
-           //TODO start spareggio
-            return;
+           return;
         }
         if(PointManager.Instance.redWinning() == red)
         {
@@ -70,5 +95,6 @@ public class Precipitate : MonoBehaviour
         {
             endText.text = "Ya lose!";
         }
+
     }
 }

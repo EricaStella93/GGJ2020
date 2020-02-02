@@ -24,6 +24,11 @@ public class WordCompleter : MonoBehaviour
 
     private SizeTween textTween;
 
+    public bool isSpareggioTime = false;
+    public bool spareggioFinished = false;
+
+    public TriggerEvent OnFinishedGame;
+
     void Start()
     {
       textTween = text.gameObject.GetComponent<SizeTween>();  
@@ -32,7 +37,7 @@ public class WordCompleter : MonoBehaviour
     void OnGUI()
         {
             Event e = Event.current;
-            if (e.isKey && !WordsManager.Instance.isTimerOver() && !blockInput)
+            if ((e.isKey && !WordsManager.Instance.isTimerOver() && !blockInput) || (isSpareggioTime && !spareggioFinished))
             {
                 if(Char.ToLower(e.character) == Char.ToLower(objectToRepair.name[currentLetter]))
                 {
@@ -51,7 +56,27 @@ public class WordCompleter : MonoBehaviour
                     {
                        blockInput = true;
                        FinishedWord();
-                       Invoke("changeWord",pause);     
+                       if (isSpareggioTime)
+                       {
+                           spareggioFinished = true;
+                           if (red)
+                           {
+                               PointManager.Instance.redPoints++;
+                           }
+                           else
+                           {
+                               PointManager.Instance.bluePoints++;
+                           }
+
+                           if (OnFinishedGame)
+                           {
+                               OnFinishedGame.Raise(null);
+                           }
+                       }
+                       else
+                       {
+                           Invoke("changeWord",pause);    
+                       }
 
                     }
                     else

@@ -14,7 +14,9 @@ public class Countdown : MonoBehaviour
     public Transform textTransform;
 
     public UnityEvent onFinishCountdown;
-    
+
+    public AudioClip clip;
+    public AudioSource source;
     
 
     private void Start()
@@ -36,6 +38,7 @@ public class Countdown : MonoBehaviour
         while (remainingSeconds > 0)
         {
             text.text = remainingSeconds.ToString();
+            source.PlayOneShot(clip);
             time = 0;
             while (time < 1)
             {
