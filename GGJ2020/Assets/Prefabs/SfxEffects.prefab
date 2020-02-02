@@ -148,7 +148,7 @@ MonoBehaviour:
   halfWordClip: {fileID: 8300000, guid: 8cf6ce4dae0948f499556ef9dca227fc, type: 3}
   fullWordClip: {fileID: 8300000, guid: 2a6f2fda2a5633c4286ccfe5830e6264, type: 3}
   innkeeperGrunt: {fileID: 8300000, guid: 282efe087e8cf344488ed621aadb0701, type: 3}
-  gameFinishedClip: {fileID: 8300000, guid: 0a37a09c7a26cd8439fb4eb04e817db8, type: 3}
-  lowTimerClip: {fileID: 0}
+  gameFinishedClip: {fileID: 8300000, guid: 70417ca7a21b2a34fa5f046d2dc648db, type: 3}
+  lowTimerClip: {fileID: 8300000, guid: 0a37a09c7a26cd8439fb4eb04e817db8, type: 3}
   minWaitForGrunt: 4
   maxWaitForGrunt: 10

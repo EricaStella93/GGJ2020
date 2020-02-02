@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -1894,7 +1894,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.25, y: 0}
   m_AnchorMax: {x: 0.25, y: 0}
-  m_AnchoredPosition: {x: -152.7, y: 43}
+  m_AnchoredPosition: {x: -152.70001, y: 21}
   m_SizeDelta: {x: 305.4, y: 142.5}
   m_Pivot: {x: 0, y: 0}
 --- !u!1 &760224007
@@ -2901,7 +2901,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a11c1670507066146b4909ae5d5b26e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  totalTimeInSeconds: 7
+  totalTimeInSeconds: 40
   onFinishedTime: {fileID: 11400000, guid: 88889aebe6e8edf479d7dcc9edb5c686, type: 2}
   bounceLimit: 5
   maxIncreaseInScale: 0.4
@@ -3386,7 +3386,7 @@ PrefabInstance:
         type: 3}
       propertyPath: lowTimerClip
       value: 
-      objectReference: {fileID: 8300000, guid: 0a37a09c7a26cd8439fb4eb04e817db8, type: 3}
+      objectReference: {fileID: 8300000, guid: 1e0cb28728c8b274883b7d8c79a5ebee, type: 3}
     - target: {fileID: 5471137284153721795, guid: 219a308c889fd084a990ba977d4572da,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3639,7 +3639,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.75, y: 0.5}
   m_AnchorMax: {x: 0.75, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 39.411}
+  m_AnchoredPosition: {x: 0, y: 38}
   m_SizeDelta: {x: 162.79, y: 162.79}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1203180220
@@ -3784,7 +3784,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.25, y: 0.5}
   m_AnchorMax: {x: 0.25, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 40.956}
+  m_AnchoredPosition: {x: 0, y: 39.54501}
   m_SizeDelta: {x: 159.88, y: 159.88}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1425805730
@@ -4723,7 +4723,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.75, y: 0}
   m_AnchorMax: {x: 0.75, y: 0}
-  m_AnchoredPosition: {x: 152.7, y: 40}
+  m_AnchoredPosition: {x: 152.70001, y: 18}
   m_SizeDelta: {x: 305.40002, y: 142.5}
   m_Pivot: {x: 1, y: 0}
 --- !u!1 &1851125016
